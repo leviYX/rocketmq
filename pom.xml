@@ -200,6 +200,7 @@
         <module>controller</module>
         <module>proxy</module>
         <module>tieredstore</module>
+        <module>myModule</module>
     </modules>
 
     <build>
