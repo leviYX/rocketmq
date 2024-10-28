@@ -22,6 +22,8 @@ import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * Add reset feature for @see java.util.concurrent.CountDownLatch
+ * rmq: 增加reset功能的CountDownLatch锁，是为了可以重置aqs的state,这样的话CountDownLatch就可以重用了，不像juc的那个一旦
+ * 减到0就不能重用了，当他可以重用的时候，其功能和CyclicBarrier就差不多了
  */
 public class CountDownLatch2 {
     private final Sync sync;
